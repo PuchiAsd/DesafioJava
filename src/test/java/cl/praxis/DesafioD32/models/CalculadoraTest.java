@@ -28,4 +28,11 @@ public class CalculadoraTest {
         assertEquals(2,resultado,"El resultado de 6-4 es 2");
     }
 
+    @Test
+    @DisplayName("Prueba del metodo división")
+    public void testDiv(){
+        float resultado = calculadora.division(8,2);
+        assertEquals(4, resultado,"El resultado de 8/2 es 4");
+    }
+
 }
