@@ -27,12 +27,16 @@ public class CalculadoraTest {
         int resultado = calculadora.resta(6,4);
         assertEquals(2,resultado,"El resultado de 6-4 es 2");
     }
-
+    @Test
+    @DisplayName("Prueba del metodo multiplicar")
+    public void testMultiplicar(){
+        int resultado = calculadora.multiplicar(3,7);
+        assertEquals(21,resultado,"El resultado de 3*7 es 21");
+    }
     @Test
     @DisplayName("Prueba del metodo división")
     public void testDiv(){
         float resultado = calculadora.division(8,2);
         assertEquals(4, resultado,"El resultado de 8/2 es 4");
     }
-
 }
