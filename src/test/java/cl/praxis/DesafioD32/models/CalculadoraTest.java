@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculadoraTest {
     private Calculadora calculadora;
@@ -38,5 +39,12 @@ public class CalculadoraTest {
     public void testDiv(){
         float resultado = calculadora.division(8,2);
         assertEquals(4, resultado,"El resultado de 8/2 es 4");
+    }
+
+    @Test
+    @DisplayName("Prueba metodo división,por 0")
+    public void testDiv0(){
+       /* float resultado = calculadora.division(4,0);*/
+        assertThrows(ArithmeticException.class,()-> calculadora.division(4,0), "El resultado no se puede realizar");
     }
 }

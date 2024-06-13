@@ -3,24 +3,32 @@ import lombok.*;
 
 @Data
 public class Calculadora {
-
-    public int suma(int a, int b){
-        int resultado = a + b;
+    public int suma(int num1, int num2){
+        int resultado = num1 + num2;
         return resultado;
     }
-    public int resta(int a, int b){
-        int resultado = a - b;
+    public int resta(int num1, int num2){
+        int resultado = num1 - num2;
         return resultado;
     }
-    public int multiplicar(int a, int b){
-        int resultado = a*b;
+    public int multiplicar(int num1, int num2){
+        int resultado = num1*num2;
         return resultado;
     }
-    public float division(int a, int b){
-        if(b==0){
+    /* Método de desafío calculadora 1
+    public float division(int num1, int num2){
+        if(num2==0){
             throw new ArithmeticException("No se puede dividir por 0");
         }
-        float resultado = (float) a/b;
+        float resultado = (float) num1/num2;
         return resultado;
+    } */
+
+    public float division(int num1, int num2){
+        if(num2==0){
+            throw new ArithmeticException("No se puede dividir por 0");
+        }
+        return (float) num1/num2;
     }
 }
+
